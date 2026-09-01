@@ -1,0 +1,10 @@
+{
+  "name": "taller-angular-pokemon",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix MiPrimerAngular run start",
+    "serve": "npm --prefix MiPrimerAngular run start",
+    "build": "npm --prefix MiPrimerAngular run build",
+    "test": "npm --prefix MiPrimerAngular run test -- --watch=false --browsers=ChromeHeadless"
+  }
+}

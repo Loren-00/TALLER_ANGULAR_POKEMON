@@ -1,0 +1,148 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 26rem;
+  background: var(--card);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e4e4e7;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.pokeball {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--pokeball-red) 0 0) top / 100% 50% no-repeat,
+    #fff;
+  border: 3px solid var(--ink);
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.pokeball::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.65rem;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  border-color: var(--pokeball-red);
+}
+
+.button {
+  padding: 0.7rem 1.25rem;
+  background: var(--pokeball-red);
+  color: #fff;
+  border: none;
+  border-radius: 0.65rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--pokeball-red-dark);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--pokeball-red-dark);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 0.75rem 1rem;
+  border-radius: 0.65rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.result {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.image-wrap {
+  background: var(--paper);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.no-image {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.name {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
