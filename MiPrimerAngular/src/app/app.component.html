@@ -1,42 +1,16 @@
-<main class="page">
-  <section class="card">
-    <header class="header">
-      <span class="pokeball" aria-hidden="true"></span>
-      <h1 class="title">Pokédex</h1>
-      <p class="subtitle">Busca un Pokémon por su nombre</p>
-    </header>
+<header>
+  <h1> {{titulo}} </h1>
 
-    <form class="search" (ngSubmit)="buscar()">
-      <input
-        class="input"
-        type="text"
-        name="query"
-        placeholder="Ej: ditto, pikachu, charizard"
-        [ngModel]="query()"
-        (ngModelChange)="query.set($event)"
-        aria-label="Nombre del Pokémon"
-        autocomplete="off"
-      />
-      <button class="button" type="submit" [disabled]="loading()">
-        {{ loading() ? 'Buscando...' : 'Buscar' }}
-      </button>
-    </form>
+  <nav>
+    <a routerLink="/registro" routerLinkActivate="activate-tab">
+      Registro Usuario
+    </a>
+    <a routerLink="/buscador" routerLinkActivate="activate-tab">
+      Buscador Pokemon
+    </a>
+  </nav>
 
-    @if (error()) {
-      <p class="error" role="alert">{{ error() }}</p>
-    }
-
-    @if (pokemon(); as p) {
-      <article class="result">
-        <div class="image-wrap">
-          @if (p.image) {
-            <img class="image" [src]="p.image" [alt]="'Imagen de ' + p.name" />
-          } @else {
-            <span class="no-image">Sin imagen disponible</span>
-          }
-        </div>
-        <h2 class="name">{{ p.name }}</h2>
-      </article>
-    }
-  </section>
-</main>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</header>
