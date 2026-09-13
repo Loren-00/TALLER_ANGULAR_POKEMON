@@ -5,6 +5,16 @@
   --paper: #f4f4f5;
   --card: #ffffff;
   --muted: #71717a;
+
+  /* Colores de tipos Pokémon */
+  --type-electric: #eab308;
+  --type-fire: #ef4444;
+  --type-grass: #22c55e;
+  --type-water: #3b82f6;
+  --type-ghost: #6b21a8;
+  --type-poison: #a855f7;
+  --type-psychic: #ec4899;
+  --type-flying: #38bdf8;
 }
 
 * {
@@ -23,4 +33,61 @@ body {
   background-color: var(--paper);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Estilos comunes reutilizables */
+.card-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: var(--card);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 3px solid transparent;
+}
+
+.card .id {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.card h1 {
+  font-size: 2.2rem;
+  color: var(--ink);
+  margin: 5px 0 15px;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card p {
+  color: var(--ink);
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.badge {
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
 }

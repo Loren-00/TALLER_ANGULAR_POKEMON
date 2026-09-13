@@ -1,0 +1,9 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-squirtle',
+  standalone: true,
+  templateUrl: './squirtle.component.html',
+  styleUrl: './squirtle.component.css'
+})
+export class SquirtleComponent {}

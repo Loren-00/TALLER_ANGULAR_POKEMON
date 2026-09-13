@@ -1,0 +1,8 @@
+.card {
+  border-color: var(--type-electric);
+}
+
+.badge.electric {
+  background-color: var(--type-electric);
+  color: var(--ink);
+}
