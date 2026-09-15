@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html lang="es">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mewtwo</title>
-</head>
-<body>
-   <main class="card-container">
-  <article class="card">
-    <span class="id">#150</span>
-    <h1>Mewtwo</h1>
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo" />
-    <div class="types">
-      <span class="badge psychic">PSÍQUICO</span>
-    </div>
-    <p>Un Pokémon creado por manipulación genética. Aunque los conocimientos humanos crearon su cuerpo, no lograron darle un corazón compasivo.</p>
-  </article>
-</main> 
-</body>
+  </head>
+  <body>
+    <main>
+      <span>#150</span>
+      <h1 (click)="mostrarNombre()" style="cursor: pointer;">{{ Mewtwo }}</h1>
+      <p>Tipo: Psíquico</p>
+    </main>
+  </body>
 </html>
