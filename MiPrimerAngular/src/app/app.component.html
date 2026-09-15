@@ -1,16 +1,28 @@
-<header>
-  <h1> {{titulo}} </h1>
+<h1>Bienvenidos al Buscador Pokemon con mas Aura de la 3227025 ;D</h1>
 
-  <nav>
-    <a routerLink="/registro" routerLinkActivate="activate-tab">
-      Registro Usuario
-    </a>
-    <a routerLink="/buscador" routerLinkActivate="activate-tab">
-      Buscador Pokemon
-    </a>
-  </nav>
+<nav>
+  <button (click)="cambiarVista('registro')">Registro Usuario</button>
+  <button (click)="cambiarVista('buscador')">Buscador Pokemon</button>
+  <button (click)="cambiarVista('pokemones')">Lista Pokémones</button>
+</nav>
 
-  <main>
-    <router-outlet></router-outlet>
-  </main>
-</header>
+<hr>
+
+@if (vistaActual === 'registro') {
+  <app-registro-usuario></app-registro-usuario>
+}
+
+@if (vistaActual === 'buscador') {
+  <app-buscador-pokemon></app-buscador-pokemon>
+}
+
+@if (vistaActual === 'pokemones') {
+  <div class="lista-pokemones">
+    <app-squirtle></app-squirtle>
+    <app-charmander></app-charmander>
+    <app-bulbasaur></app-bulbasaur>
+    <app-gengar></app-gengar>
+    <app-mewtwo></app-mewtwo>
+    <app-charizard></app-charizard>
+  </div>
+}

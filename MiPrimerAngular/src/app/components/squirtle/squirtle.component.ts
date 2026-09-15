@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <main>
       <span>#007</span>
-      <h1 (click)="mostrarNombre()" style="cursor: pointer;">{{ Squirtle }}</h1>
+      <h1 (click)="mostrarNombre()" style="cursor: pointer;">Squirtle</h1>
       <p>Tipo: Agua</p>
     </main>
   `
