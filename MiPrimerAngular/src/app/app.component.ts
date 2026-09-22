@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+
+// Componentes del flujo principal de Pokémon
+import { PokemonListaComponent } from './components/pokemon-lista/pokemon-lista.component';
+import { PokemonDetallesComponent } from './components/pokemon-detalles/pokemon-detalles.component';
+
+// Componentes individuales / adicionales
 import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 import { BuscadorPokemonComponent } from './components/buscador-pokemon/buscador-pokemon.component';
 import { SquirtleComponent } from './components/squirtle/squirtle.component';
@@ -12,6 +18,8 @@ import { GengarComponent } from './components/gengar/gengar.component';
   selector: 'app-root',
   standalone: true,
   imports: [
+    PokemonListaComponent,
+    PokemonDetallesComponent,
     RegistroUsuarioComponent,
     BuscadorPokemonComponent,
     SquirtleComponent,

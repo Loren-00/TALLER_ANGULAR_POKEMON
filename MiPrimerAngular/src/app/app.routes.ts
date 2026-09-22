@@ -9,20 +9,20 @@ import { BulbasaurComponent } from './components/bulbasaur/bulbasaur.component';
 import { SquirtleComponent } from './components/squirtle/squirtle.component';
 import { GengarComponent } from './components/gengar/gengar.component';
 import { MewtwoComponent } from './components/mewtwo/mewtwo.component';
+import { PokemonListaComponent } from './components/pokemon-lista/pokemon-lista.component';
+import { PokemonDetallesComponent } from './components/pokemon-detalles/pokemon-detalles.component';
 
 export const routes: Routes = [ 
   { path: '', redirectTo: 'registro', pathMatch: 'full' },
   { path: 'registro', component: RegistroUsuarioComponent },
   { path: 'buscador', component: BuscadorPokemonComponent }, // Se asignó su propia ruta única
-
-  // Rutas individuales de los Pokémones
+  { path: '**', redirectTo: 'registro' },
   { path: 'pikachu', component: charmanderComponent },
   { path: 'charizard', component: CharizardComponent },
   { path: 'bulbasaur', component: BulbasaurComponent },
   { path: 'squirtle', component: SquirtleComponent },
   { path: 'gengar', component: GengarComponent },
   { path: 'mewtwo', component: MewtwoComponent },
-
-  // Redirección para cualquier ruta no encontrada (debe ir siempre al final)
-  { path: '**', redirectTo: 'registro' }
+  { path: 'pokemon-lista', component: PokemonListaComponent },
+  { path: 'pokemon-detalles', component: PokemonDetallesComponent }
 ];

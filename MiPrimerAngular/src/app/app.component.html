@@ -3,7 +3,9 @@
 <nav>
   <button (click)="cambiarVista('registro')">Registro Usuario</button>
   <button (click)="cambiarVista('buscador')">Buscador Pokemon</button>
-  <button (click)="cambiarVista('pokemones')">Lista Pokémones</button>
+  <button (click)="cambiarVista('pokemones')">Pokémones</button>
+  <button (click)="cambiarVista('lista-pokemones')">Lista Pokémones</button>
+  <button (click)="cambiarVista('detalles-pokemones')">Detalles Pokémones</button>
 </nav>
 
 <hr>
@@ -17,7 +19,7 @@
 }
 
 @if (vistaActual === 'pokemones') {
-  <div class="lista-pokemones">
+  <div class="pokemones">
     <app-squirtle></app-squirtle>
     <app-charmander></app-charmander>
     <app-bulbasaur></app-bulbasaur>
@@ -25,4 +27,12 @@
     <app-mewtwo></app-mewtwo>
     <app-charizard></app-charizard>
   </div>
+}
+
+@if (vistaActual === 'lista-pokemones') {
+  <app-lista-pokemones></app-lista-pokemones>
+}
+
+@if (vistaActual === 'detalles-pokemones') {
+  <app-detalles-pokemones></app-detalles-pokemones>
 }
